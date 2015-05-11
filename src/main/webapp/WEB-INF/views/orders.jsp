@@ -64,10 +64,10 @@
 <form:form action="${addAction}" commandName="orders">
 <%-- 	<form:form method="post" action="customer" commandName="customer"> --%>
 		<table>
-			<c:if test="${!empty orders.orderID}">
+			<c:if test="${! empty orders.customerId}">
 				<tr>
 					<td><form:label path="orderID">
-							<spring:message text="orderID" />
+							<spring:message text="Order ID" />
 						</form:label>
 					</td>
 					<td><form:input path="orderID" readonly="true" size="8"
@@ -79,6 +79,13 @@
 			<tr>
 				<td><form:label path="customerId">Customer ID :</form:label></td>
 				<td><form:input path="customerId" /></td>
+				<%-- <td><form:select path="customerId" items="${customer.customerId}" value="....."/></td> --%>
+				<%-- <td>
+					<form:select path="customerId" value="....">
+						<form:option value="NONE" label="--- Select ---" />
+				    	<form:options items="${customerId}" />
+				    </form:select>
+			    </td> --%>
 			</tr>
 			<tr>
 				<td><form:label path="totalAmount">Total Amount :</form:label></td>
@@ -113,10 +120,10 @@
 			<c:forEach items="${listOrders}" var="orders">
 				<tr>
 					<td>${orders.orderID}</td>
-					<td>${orders.customerID}</td>
+					<td>${orders.customerId}</td>
 					<td>${orders.totalAmount}</td>
-					<td><a href="<c:url value='/customer/edit/${orders.orderID}' />">Edit</a></td>
-					<td><a href="<c:url value='/customer/remove/${orders.orderID}' />">Delete</a></td>
+					<td><a href="<c:url value='/orders/edit/${orders.orderID}' />">Edit</a></td>
+					<td><a href="<c:url value='/orders/remove/${orders.orderID}' />">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>

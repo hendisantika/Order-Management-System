@@ -1,5 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 
 <c:url var="actionUrl" value="save" />
@@ -35,7 +35,7 @@
 <div id="login-box-name"><h3><!-- <a href="listProducts.jsp"> Products List</a> --><a href="products"> Products List</a></h3></div><div id="login-box-field"></div>
  --%><br />
 <br />
-<%-- <a href="#"><img src='<c:url value="/resources/images/login-btn.png"/>' width="103" height="42" style="margin-left:90px;" /></a> --%>
+<%-- <a href="#"><img src='<c:url value="/webapp/resources/images/login-btn.png"/>' width="103" height="42" style="margin-left:90px;" /></a> --%>
 	<h3>
 			<a href="products"> Add New Product</a>
 		</h3>

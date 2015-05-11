@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.hendi.oms.model.Customer;
 import com.hendi.oms.model.Orders;
 
 public class OrdersDAOImpl implements OrdersDAO{
@@ -62,11 +63,18 @@ public class OrdersDAOImpl implements OrdersDAO{
 		
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Orders> getCustomername() {
 		Session session = this.sessionFactory.getCurrentSession();
 		List<Orders> ordersList = session.createQuery("select Customer from Orders").list();
-		return null;
+		return ordersList;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Customer> listCustomer() {
+		return sessionFactory.getCurrentSession().createSQLQuery("SELECT cusFirstname, cusLastname FROM Customer").list(); 
 	}
 	
 	

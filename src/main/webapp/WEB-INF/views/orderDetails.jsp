@@ -61,12 +61,12 @@
 <h2>Add new Orders</h2>
 <c:url var="addAction" value="/orderDetails/add" ></c:url>
  
-<form:form action="${addAction}" commandName="orderDetails">
+<form:form action="${addAction}" commandName="orderDetails" method="POST">
 		<table>
-			<c:if test="${!empty orderDetails.orderDetailsNo}">
+			<c:if test="${!empty orderDetails.orderID}">
 				<tr>
 					<td><form:label path="orderDetailsNo">
-							<spring:message text="orderDetailsNo" />
+							<spring:message text="Order Details No " />
 						</form:label>
 					</td>
 					<td><form:input path="orderDetailsNo" readonly="true" size="8"
@@ -76,8 +76,8 @@
 			</c:if>
 		
 			<tr>
-				<td><form:label path="orderId">Order ID :</form:label></td>
-				<td><form:input path="orderId" /></td>
+				<td><form:label path="orderID">Order ID :</form:label></td>
+				<td><form:input path="orderID" /></td>
 			</tr>
 			<tr>
 				<td><form:label path="productId">ProductId :</form:label></td>

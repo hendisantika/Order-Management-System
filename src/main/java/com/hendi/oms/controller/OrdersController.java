@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import com.hendi.oms.model.Orders;
 import com.hendi.oms.service.OrdersService;
 
@@ -35,6 +34,11 @@ public class OrdersController {
 		public String listOrders(Model model) {
 			model.addAttribute("orders", new Orders());
 			model.addAttribute("listOrders", this.ordersService.listOrders());
+			
+//			Map<String, Object> models = new HashMap<String, Object>();
+//	        models.put("orders", ordersService.listCustomer());
+//	        return new ModelAndView("orders", "models", models);
+			
 			return "orders";
 		}
 		
@@ -51,18 +55,20 @@ public class OrdersController {
 			return "redirect:/orders";
 		}
 		
-		@RequestMapping(value = "/order/remove/{orderId}")
+		@RequestMapping(value = "/orders/remove/{orderId}")
 		public String removeOrders(@PathVariable("orderId") int id) {
 			this.ordersService.removeOrders(id);
 			return "redirect:/orders";
 		}
 		
-		@RequestMapping(value="/order/edit/{orderId}")
+		@RequestMapping(value="/orders/edit/{orderId}")
 		public String editOrdersById(@PathVariable("orderId") int id, Model model) {
 			model.addAttribute("order", this.ordersService.getOrdersById(id));
 			model.addAttribute("listOrders", this.ordersService.listOrders());
 			return "orders";
 		}
+		
+		
 		
 
 }

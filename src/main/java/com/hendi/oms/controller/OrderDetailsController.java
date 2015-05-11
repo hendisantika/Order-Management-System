@@ -18,7 +18,7 @@ public class OrderDetailsController {
 	
 	// Controller untuk Order Details
 		@Autowired(required=true)
-		@Qualifier(value="ordersDetailsService")
+		@Qualifier(value="orderDetailsService")
 	   public void setOrderDetailsService(OrderDetailsService orderDetailsService) {
 			this.orderDetailsService = orderDetailsService;
 		}

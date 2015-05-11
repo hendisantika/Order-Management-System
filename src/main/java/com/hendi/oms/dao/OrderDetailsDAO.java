@@ -10,5 +10,6 @@ public interface OrderDetailsDAO {
 	public List<OrderDetails> listOrderDetails();
 	public OrderDetails getOrderDetailsbyId(int id);
 	public void removeOrderDetails(int id);
+	
 
 }

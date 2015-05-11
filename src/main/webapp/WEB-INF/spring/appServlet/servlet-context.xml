@@ -24,6 +24,8 @@
         <beans:property name="prefix" value="/WEB-INF/views/" />
         <beans:property name="suffix" value=".jsp" />
     </beans:bean>
+    
+    <context:component-scan base-package="com.hendi.oms" />
  
     <beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
         destroy-method="close">
@@ -83,8 +85,6 @@
         <beans:property name="orderDetailsDAO" ref="orderDetailsDAO"></beans:property>
     </beans:bean>
     
-    <context:component-scan base-package="com.hendi.oms" />
-     
     <tx:annotation-driven transaction-manager="transactionManager"/>
      
     <beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">

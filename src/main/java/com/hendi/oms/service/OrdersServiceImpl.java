@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.hendi.oms.dao.OrdersDAO;
+import com.hendi.oms.model.Customer;
 import com.hendi.oms.model.Orders;
 
 @Service
@@ -50,6 +51,11 @@ public class OrdersServiceImpl implements OrdersService{
 	public void removeOrders(int id) {
 		this.ordersDAO.removeOrders(id);
 		
+	}
+
+	@Override
+	public List<Customer> listCustomer() {
+		return this.ordersDAO.listCustomer();
 	}
 	
 

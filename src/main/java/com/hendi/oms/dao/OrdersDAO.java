@@ -2,6 +2,7 @@ package com.hendi.oms.dao;
 
 import java.util.List;
 
+import com.hendi.oms.model.Customer;
 import com.hendi.oms.model.Orders;
 
 public interface OrdersDAO {
@@ -11,5 +12,5 @@ public interface OrdersDAO {
 	public List<Orders> getCustomername();
 	public Orders getOrdersById(int id);
 	public void removeOrders(int id);
-	
+	public List<Customer> listCustomer();
 }
