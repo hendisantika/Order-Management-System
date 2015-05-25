@@ -44,6 +44,7 @@
 		</h3>
 		<h3>
 			<a href='<c:url value="orders"/>'> Add New Orders</a>
+			<%-- <a href='<c:url value="listorders"/>'> Add New Orders</a> --%>
 		</h3>
 		<h3>
 			<a href='<c:url value="orderDetails"/>'> Add New Order Details</a>

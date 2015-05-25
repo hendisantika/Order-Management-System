@@ -150,6 +150,35 @@
 					<td><a href="<c:url value='/customer/edit/${customer.customerId}' />">Edit</a></td>
 					<td><a href="<c:url value='/customer/remove/${customer.customerId}' />">Delete</a></td>
 				</tr>
+				<tr>
+					<td>${customer.cusFirstname} ${customer.cusLastname}</td>
+				</tr>
+				<%-- <form:select path="customer" size="1">
+					<form:options items="${listCustomers}"  /> 
+				</form:select> --%> 
+				
+			</c:forEach>
+			 <%-- 
+			<c:forEach items="${listCustomers}" var="customer">
+				
+				Customers :
+				<form:select path="customer">
+					  <form:option value="NONE" label="--- Select ---" />
+					  <form:options items="${customer.cusFirstname} ${customer.cusLastname}" />
+				       </form:select>
+			</c:forEach> --%>
+			<c:forEach items="${showCusName}" var="customer">
+				<tr>
+					<td>${customer.customerId}</td>
+					<td>${customer.cusFirstname}</td>
+					<td>${customer.cusLastname}</td>
+					<td>${customer.cusEmail}</td>
+					<td>${customer.cusPhoneNo}</td>
+					<td>${customer.cusCity}</td>
+					<td>${customer.cusProvince}</td>
+					<td>${customer.cusCountry}</td>
+				</tr>
+				
 			</c:forEach>
 		</table>
 	</c:if>

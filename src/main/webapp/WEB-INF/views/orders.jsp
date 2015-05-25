@@ -64,7 +64,7 @@
 <form:form action="${addAction}" commandName="orders">
 <%-- 	<form:form method="post" action="customer" commandName="customer"> --%>
 		<table>
-			<c:if test="${! empty orders.customerId}">
+			<c:if test="${orders.customerId > 0}">
 				<tr>
 					<td><form:label path="orderID">
 							<spring:message text="Order ID" />
@@ -93,10 +93,10 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<c:if test="${!empty orders.orderID}">
+					<c:if test="${empty orders.customerId}">
 						<input type="submit" value="<spring:message text="Edit Orders"/>" />
 					</c:if> 
-					<c:if test="${empty orders.orderID}">
+					<c:if test="${!empty orders.customerId}">
 						<input type="submit" value="<spring:message text="Add Orders" />" />
 					</c:if>					
 				</td>

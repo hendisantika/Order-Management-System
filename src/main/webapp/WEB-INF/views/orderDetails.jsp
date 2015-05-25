@@ -63,7 +63,7 @@
  
 <form:form action="${addAction}" commandName="orderDetails" method="POST">
 		<table>
-			<c:if test="${!empty orderDetails.orderID}">
+			<c:if test="${orderDetails.orderID > 0}">
 				<tr>
 					<td><form:label path="orderDetailsNo">
 							<spring:message text="Order Details No " />

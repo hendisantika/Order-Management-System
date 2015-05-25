@@ -61,6 +61,15 @@ public class CustomerDAOImpl implements CustomerDAO {
 		logger.info("Customer deleted succesfully. Customer details = " + customer );
 		
 	}
+	@Override
+	public List<Customer> showCusName() {
+		Session session = this.sessionFactory.getCurrentSession();
+		List<Customer> customerList = session.createQuery("select concat (c.cusFirstname, c.cusLastname)as fullname from Customer c").list();
+		for(Customer c : customerList){
+			logger.info("Customer List :: " + c);
+		}
+		return customerList;
+	}
 	
 	
 

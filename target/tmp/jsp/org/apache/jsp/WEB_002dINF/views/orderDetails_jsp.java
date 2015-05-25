@@ -163,7 +163,7 @@ public final class orderDetails_jsp extends org.apache.jasper.runtime.HttpJspBas
             org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
             _jspx_th_c_if_0.setPageContext(_jspx_page_context);
             _jspx_th_c_if_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_0);
-            _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${!empty orderDetails.orderID}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+            _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${orderDetails.orderID > 0}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
             int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
             if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
               do {

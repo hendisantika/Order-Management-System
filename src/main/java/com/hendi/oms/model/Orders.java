@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,7 +15,12 @@ public class Orders {
 	@Column(name="orderID")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int orderID;
+	
+	//@OneToOne(mappedBy = "orders")
 	int customerId;
+	//Customer customer;
+	
+	
 	double totalAmount;
 	
 	public int getOrderID() {
@@ -23,12 +29,7 @@ public class Orders {
 	public void setOrderID(int orderID) {
 		this.orderID = orderID;
 	}
-	public int getCustomerId() {
-		return customerId;
-	}
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
-	}
+	
 	public double getTotalAmount() {
 		return totalAmount;
 	}
@@ -36,6 +37,12 @@ public class Orders {
 		this.totalAmount = totalAmount;
 	}
 	
+	public int getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
 	@Override
 	public String toString(){
 		return "orderID = " + orderID + " , customerId = " + customerId + " , totalAmount = " + totalAmount;

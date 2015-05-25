@@ -45,4 +45,9 @@ public class CustomerServiceImpl implements CustomerService {
 		this.customerDAO.removeCustomer(id);
 	}
 
+	@Override
+	public List<Customer> showCusName() {
+		return this.customerDAO.showCusName();
+	}
+
 }

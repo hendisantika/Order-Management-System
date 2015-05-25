@@ -19,6 +19,8 @@
  
     <!-- Resolves views selected for rendering by @Controllers to .jsp resources 
         in the /WEB-INF/views directory -->
+        
+	<!-- Register the Customer.properties -->
     <beans:bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <beans:property name="prefix" value="/WEB-INF/views/" />

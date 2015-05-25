@@ -12,6 +12,7 @@ import com.hendi.oms.model.Orders;
 import com.hendi.oms.service.OrdersService;
 
 @Controller
+/*@RequestMapping(value="/order")*/
 public class OrdersController {
 		private OrdersService ordersService;
 	
@@ -63,7 +64,7 @@ public class OrdersController {
 		
 		@RequestMapping(value="/orders/edit/{orderId}")
 		public String editOrdersById(@PathVariable("orderId") int id, Model model) {
-			model.addAttribute("order", this.ordersService.getOrdersById(id));
+			model.addAttribute("orders", this.ordersService.getOrdersById(id));
 			model.addAttribute("listOrders", this.ordersService.listOrders());
 			return "orders";
 		}
