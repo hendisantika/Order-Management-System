@@ -53,3 +53,41 @@
 2015-05-20 16:26:09,482 [qtp1766123713-19] INFO (CustomerDAOImpl.java:43) ­ Customer List :: customerId = 2 , cusFirstname = Uchiha , cusLastname = Sasuke , cusEmail = uchiha_sasuke@konohagakure.jp , cusPhoneNo = 081234567892 , cusCity = Konoha, cusProvince = Daun , cusCountry = Negara Api
 2015-05-20 16:26:29,541 [Thread-2] INFO (AbstractApplicationContext.java:862) ­ Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed May 20 16:24:48 WIB 2015]; parent: Root WebApplicationContext
 2015-05-20 16:26:29,564 [Thread-2] INFO (AbstractApplicationContext.java:862) ­ Closing Root WebApplicationContext: startup date [Wed May 20 16:24:47 WIB 2015]; root of context hierarchy
+2017-06-14 08:30:24,557 [main] INFO (ContextLoader.java:304) ­ Root WebApplicationContext: initialization started
+2017-06-14 08:30:24,594 [main] INFO (AbstractApplicationContext.java:583) ­ Refreshing Root WebApplicationContext: startup date [Wed Jun 14 08:30:24 WIB 2017]; root of context hierarchy
+2017-06-14 08:30:24,623 [main] INFO (XmlBeanDefinitionReader.java:317) ­ Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2017-06-14 08:30:24,701 [main] INFO (ContextLoader.java:344) ­ Root WebApplicationContext: initialization completed in 142 ms
+2017-06-14 08:30:24,764 [main] INFO (FrameworkServlet.java:489) ­ FrameworkServlet 'appServlet': initialization started
+2017-06-14 08:30:24,766 [main] INFO (AbstractApplicationContext.java:583) ­ Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Jun 14 08:30:24 WIB 2017]; parent: Root WebApplicationContext
+2017-06-14 08:30:24,767 [main] INFO (XmlBeanDefinitionReader.java:317) ­ Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+2017-06-14 08:30:25,141 [main] INFO (AutowiredAnnotationBeanPostProcessor.java:155) ­ JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-06-14 08:30:25,329 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/customers2],methods=[GET]}" onto public java.lang.String com.hendi.oms.controller.CustomerController.listCustomers2(org.springframework.ui.Model)
+2017-06-14 08:30:25,330 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/show],methods=[GET]}" onto public java.lang.String com.hendi.oms.controller.CustomerController.showCustomers(org.springframework.ui.Model)
+2017-06-14 08:30:25,331 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/customer/add],methods=[POST]}" onto public java.lang.String com.hendi.oms.controller.CustomerController.addCustomer(com.hendi.oms.model.Customer)
+2017-06-14 08:30:25,331 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/customer/remove/{customerId}]}" onto public java.lang.String com.hendi.oms.controller.CustomerController.removeCustomer(int)
+2017-06-14 08:30:25,331 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/customer/edit/{customerId}]}" onto public java.lang.String com.hendi.oms.controller.CustomerController.editCustomerById(int,org.springframework.ui.Model)
+2017-06-14 08:30:25,331 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/customers],methods=[GET]}" onto public java.lang.String com.hendi.oms.controller.CustomerController.listCustomers(org.springframework.ui.Model)
+2017-06-14 08:30:25,333 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/orderDetails/remove/{orderDetailsNo}]}" onto public java.lang.String com.hendi.oms.controller.OrderDetailsController.removeOrders(int)
+2017-06-14 08:30:25,333 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/orderDetails/edit/{orderDetailsNo}]}" onto public java.lang.String com.hendi.oms.controller.OrderDetailsController.editOrderDetailsById(int,org.springframework.ui.Model)
+2017-06-14 08:30:25,334 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/orderDetails],methods=[GET]}" onto public java.lang.String com.hendi.oms.controller.OrderDetailsController.listOrderDetails(org.springframework.ui.Model)
+2017-06-14 08:30:25,334 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/orderDetails/add],methods=[POST]}" onto public java.lang.String com.hendi.oms.controller.OrderDetailsController.addOrderDetails(com.hendi.oms.model.OrderDetails)
+2017-06-14 08:30:25,336 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/orders/remove/{orderId}]}" onto public java.lang.String com.hendi.oms.controller.OrdersController.removeOrders(int)
+2017-06-14 08:30:25,336 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/orders/add],methods=[POST]}" onto public java.lang.String com.hendi.oms.controller.OrdersController.addOrders(com.hendi.oms.model.Orders)
+2017-06-14 08:30:25,337 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/orders/edit/{orderId}]}" onto public java.lang.String com.hendi.oms.controller.OrdersController.editOrdersById(int,org.springframework.ui.Model)
+2017-06-14 08:30:25,337 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/orders],methods=[GET]}" onto public java.lang.String com.hendi.oms.controller.OrdersController.listOrders(org.springframework.ui.Model)
+2017-06-14 08:30:25,341 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hendi.oms.controller.ProductController.MainMenu(org.springframework.ui.Model)
+2017-06-14 08:30:25,341 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/products],methods=[GET]}" onto public java.lang.String com.hendi.oms.controller.ProductController.listProducts(org.springframework.ui.Model)
+2017-06-14 08:30:25,342 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/product/add],methods=[POST]}" onto public java.lang.String com.hendi.oms.controller.ProductController.addProduct(com.hendi.oms.model.Product)
+2017-06-14 08:30:25,342 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/remove/{productId}]}" onto public java.lang.String com.hendi.oms.controller.ProductController.removeProduct(int)
+2017-06-14 08:30:25,342 [main] INFO (AbstractHandlerMethodMapping.java:543) ­ Mapped "{[/edit/{productId}]}" onto public java.lang.String com.hendi.oms.controller.ProductController.editProductbyId(int,org.springframework.ui.Model)
+2017-06-14 08:30:25,377 [main] INFO (Version.java:27) ­ HV000001: Hibernate Validator 5.1.3.Final
+2017-06-14 08:30:25,477 [main] INFO (RequestMappingHandlerAdapter.java:534) ­ Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Jun 14 08:30:24 WIB 2017]; parent: Root WebApplicationContext
+2017-06-14 08:30:25,505 [main] INFO (RequestMappingHandlerAdapter.java:534) ­ Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Jun 14 08:30:24 WIB 2017]; parent: Root WebApplicationContext
+2017-06-14 08:30:25,550 [main] INFO (AbstractUrlHandlerMapping.java:362) ­ Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2017-06-14 08:30:25,652 [main] INFO (Version.java:45) ­ HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-14 08:30:25,654 [main] INFO (Environment.java:213) ­ HHH000206: hibernate.properties not found
+2017-06-14 08:30:25,681 [main] INFO (JavaReflectionManager.java:66) ­ HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-14 08:30:25,979 [main] INFO (Dialect.java:157) ­ HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-06-14 08:30:26,532 [main] INFO (FrameworkServlet.java:508) ­ FrameworkServlet 'appServlet': initialization completed in 1768 ms
+2017-06-14 08:47:44,446 [Thread-1] INFO (AbstractApplicationContext.java:984) ­ Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Jun 14 08:30:24 WIB 2017]; parent: Root WebApplicationContext
+2017-06-14 08:47:44,454 [Thread-1] INFO (AbstractApplicationContext.java:984) ­ Closing Root WebApplicationContext: startup date [Wed Jun 14 08:30:24 WIB 2017]; root of context hierarchy
