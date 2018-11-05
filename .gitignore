@@ -68,3 +68,16 @@ fabric.properties
 hs_err_pid*
 
 target/
+.classpath
+.idea/.name
+.idea/artifacts/
+.idea/compiler.xml
+.idea/dbnavigator.xml
+.idea/markdown-navigator/
+.idea/misc.xml
+.idea/modules.xml
+.idea/sonarlint/
+.idea/vcs.xml
+.project
+.settings/
+OMS2.iml
